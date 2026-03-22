@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  auth:
+    build: ./auth-serv
+
+  task:
+    build: ./task-serv
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - auth
+      - task

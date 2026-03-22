@@ -1,0 +1,10 @@
+FROM golang:1.25.0
+
+
+WORKDIR /auth-serv
+
+COPY . .
+
+RUN go build -o app
+
+CMD ["./app"]
