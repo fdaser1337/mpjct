@@ -6,6 +6,7 @@ import (
 
 func health(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "OK")
+	fmt.Fprintf(w, "NEW VERSION")
 }
 func login(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "login endpoint")
